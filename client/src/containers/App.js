@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <header>National Parks</header>
+        <header><img style={{maxWidth: '90px'}} src="https://pngimage.net/wp-content/uploads/2018/05/chatbot-png-2.png"></img> Chatbot IA</header>
         <section ref="main">
           { this.state.conversationHistory.map((h,i) => this.renderExchange(h, i)) }
         </section>
@@ -71,18 +71,24 @@ class App extends Component {
 
   renderText(exchange, key) {
     return (
-      <div key={key} className="exchange">
+      <div key={key} className="exchange">        
         { exchange.input.text ? <div className="user-msg">{exchange.input.text}</div> : null }
-        { exchange.output.text.map((t, i) => <div key={i} className="watson-msg">{t}</div>) }
+        { exchange.output.text ? <img className="img-bot" src="https://pngimage.net/wp-content/uploads/2018/05/chatbot-png-2.png"></img> : null} 
+        {/* { exchange.output.text.map((t, i) => <div key={i} className="watson-msg" >{t}</div>) } */}
+        { exchange.output.text.map((t, i) => <div key={i} className="watson-msg" dangerouslySetInnerHTML={{__html: t}}></div>) }
       </div>);
   }
 
   renderInputView() {
-    return <input type="text" autoComplete="off" placeholder='Type something'
-                  onKeyUp={e => this.onInputKeyUp(e)}/>;
+    return  <div className="input-group mb-3">
+              <input type="text" id="ipt-question" autoComplete="off" className="form-control" placeholder='Escriba su pregunta' aria-label="Recipient's username" aria-describedby="basic-addon2" onKeyUp={e => this.onInputKeyUp(e)}/>
+              <div className="input-group-append">
+                <button style={{width:'100%', height:'38px'}} className="btn btn-info" type="button" onClick={e=>this.onButtonClick()}><i className="material-icons">send</i></button>
+              </div>
+            </div>;
   }
 
-  onInputKeyUp(e) {
+  onInputKeyUp(e) {    
     switch (e.which) {
       case 0x0d:
         this.sendMessage(e.target.value);
@@ -91,6 +97,13 @@ class App extends Component {
       default:
         break;
     }
+  }
+
+  onButtonClick(){
+    var pregunta=document.getElementById("ipt-question");    
+    this.sendMessage(pregunta.value);
+    pregunta.value='';
+    
   }
 
   sendMessage(text) {

@@ -13,11 +13,13 @@ class ConversationService {
     const payload = {
       input: {
         text
-      },
+      },      
       context: this._responseContext
     };
     console.log('request',payload);
-    return apiGatewayRequest(`${config.apiRoot}/watson/conversation/message`, {
+    // return apiGatewayRequest(`${config.apiRoot}/watson/conversation/message`, {
+    return apiGatewayRequest(`https://backendia.azurewebsites.net/natparks/api/v1/watson/conversation/message`, {
+    // return apiGatewayRequest(`https://ttassistant.azurewebsites.net/conversation/`, {
       method: 'post',
       headers: COMMON_API_GATEWAY_HEADERS,
       body: JSON.stringify(payload)

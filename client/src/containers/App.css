@@ -74,13 +74,15 @@ footer {
 .user-msg,
 .watson-msg {
   font-size: 11pt;
+  font-weight: 500;
   color: #323232;
-  background-color: #00b4a0; /*#fef9fb;*/
+  /* background-color: #00b4a0; #fef9fb; */
+  background-color: #FF685B;
   border-radius: 20px;
   margin: 0 5px 10px;
   padding: 10px 15px;
   position: relative;
-  clear: both;
+  /* clear: both; */
   line-height: 1em;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -101,7 +103,8 @@ footer {
 }
 
 .user-msg:after {
-   border-color: transparent #00b4a0 transparent transparent;
+   /* border-color: transparent #00b4a0 transparent transparent; */
+   border-color: transparent #FF685B transparent transparent;
    border-style: solid;
    border-width: 0 15px 8px 0;
    bottom: -7px;
@@ -114,7 +117,10 @@ footer {
 
 .watson-msg {
   border-bottom-left-radius: 0;
+  /* original */
   float: left;
+  /* float: right; */
+  max-width: 400px;
   background-color: #e7e9ec;
 }
 
@@ -130,6 +136,12 @@ footer {
    width: 0;
  }
 
+.watson-msg a{
+  color: #00b4a0 !important;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 input {
   box-sizing:border-box;
   flex: 1;
@@ -141,6 +153,30 @@ input {
   border-radius: 20px;
   padding: 8px 10px;
 }
+.exchange{
+  height: auto;
+  /* background-color: red; */
+  overflow: auto;
+  position: relative;
+}
+
+.img-bot{
+  max-width: 50px;
+  float: left;
+  clear: both;
+  /* position: absolute;
+  bottom: 0; */
+}
+
+button{
+  background-color: #FF685B !important;
+  border-color: #FF685B !important;
+  border-radius: 0 15px 15px 0 !important;
+}
+
+#ipt-question{
+  border-radius: 15px 0 0 15px;
+}
 
 @media (min-width: 600px) {
 
@@ -151,5 +187,11 @@ input {
         margin-left: auto;
         max-width: 500px;
         margin-right: auto;
-    }
+    }    
+}
+
+@media (max-width:500px){
+  .watson-msg{
+    max-width: 271px;
+  }
 }
