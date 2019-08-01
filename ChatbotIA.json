@@ -1,0 +1,1684 @@
+{
+  "name": "ChatbotIAv2",
+  "intents": [
+    {
+      "intent": "AcercaDeTuring",
+      "examples": [
+        {
+          "text": "¿Quién fue?"
+        }
+      ],
+      "description": "Hablar sobre Alan Turing."
+    },
+    {
+      "intent": "Negacion",
+      "examples": [
+        {
+          "text": "A que no llamarle"
+        },
+        {
+          "text": "Que no es"
+        }
+      ],
+      "description": "Usada cuando alguien pregunte sobre que no es algún determinado tópico"
+    },
+    {
+      "intent": "Aplicación",
+      "examples": [
+        {
+          "text": "¿Cuál es la aplicación?"
+        },
+        {
+          "text": "¿Cuáles son los campos de aplicación?"
+        },
+        {
+          "text": "Aplicación de"
+        },
+        {
+          "text": "¿Cómo se puede aplicar?"
+        },
+        {
+          "text": "¿Dónde puedo aplicar?"
+        },
+        {
+          "text": "¿En dónde se aplica?"
+        }
+      ],
+      "description": "Para hablar sobre las aplicaciones de las ramas de la IA"
+    },
+    {
+      "intent": "Definicion",
+      "examples": [
+        {
+          "text": "¿Qué significa?"
+        },
+        {
+          "text": "concepto"
+        },
+        {
+          "text": "inteligencia artificial sistemas que piensan como humanos"
+        },
+        {
+          "text": "¿Cuál es la definición?"
+        },
+        {
+          "text": "¿Qué es?"
+        },
+        {
+          "text": "Dime qué es"
+        },
+        {
+          "text": "¿Qué son?"
+        }
+      ],
+      "description": "Para dar la definición de algún tópica de IA"
+    },
+    {
+      "intent": "AcercaDeIA",
+      "examples": [
+        {
+          "text": "¿Qué me puedes contar?"
+        },
+        {
+          "text": "Dime que sabes"
+        },
+        {
+          "text": "¿Qué conoces?"
+        },
+        {
+          "text": "¿Qué sabes?"
+        }
+      ],
+      "description": "Obtener lo que el chatbot puede hablar sobreun tópico de la inteligencia artificial"
+    },
+    {
+      "intent": "Despedida",
+      "examples": [
+        {
+          "text": "Eso es todo"
+        },
+        {
+          "text": "Muchas gracias"
+        },
+        {
+          "text": "Adiós"
+        },
+        {
+          "text": "Chao"
+        }
+      ],
+      "description": "Despedirse del estudiante"
+    },
+    {
+      "intent": "Clasificación",
+      "examples": [
+        {
+          "text": "¿Cuál es la clasificación?"
+        },
+        {
+          "text": "¿En qué se divide?"
+        },
+        {
+          "text": "Clasificación de"
+        },
+        {
+          "text": "¿Cómo se clasifica?"
+        },
+        {
+          "text": "Dime la clasificación"
+        }
+      ],
+      "description": "Para dar la clasificación de los agentes inteligentes"
+    },
+    {
+      "intent": "Propósito",
+      "examples": [
+        {
+          "text": "¿Cuál es el propósito?"
+        },
+        {
+          "text": "¿Cuál es la intención?"
+        },
+        {
+          "text": "¿Cuál es el objetivo?"
+        },
+        {
+          "text": "¿Para qué sirve?"
+        },
+        {
+          "text": "¿Qué propósito tiene?"
+        }
+      ],
+      "description": "Proposito de la Inteligencia Artificial"
+    },
+    {
+      "intent": "Software",
+      "examples": [
+        {
+          "text": "¿Qué progamas puedo utilizar?"
+        },
+        {
+          "text": "Herramientas"
+        },
+        {
+          "text": "¿Podrías decirme que aplicaciones informáticas?"
+        },
+        {
+          "text": "Dime que programas utilizar"
+        },
+        {
+          "text": "¿Qué software recomendarías?"
+        },
+        {
+          "text": "¿Qué software se puede usar?"
+        },
+        {
+          "text": "Programas"
+        }
+      ],
+      "description": "Listar los productos de software que pueden usarse para el desarrollo de algún tema."
+    },
+    {
+      "intent": "Saludo",
+      "examples": [
+        {
+          "text": "Que más ve"
+        },
+        {
+          "text": "Hola nuevamente"
+        },
+        {
+          "text": "Hola"
+        }
+      ],
+      "description": "Saludo cuando inicie la conversación"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Historia",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Alan Turing",
+          "synonyms": [
+            "Alan Mathison Turing",
+            "A. Turing"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Test de Turing",
+          "synonyms": [
+            "Prueba de Turing"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Enfoque",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "enfoque",
+          "synonyms": [
+            "punto de vista"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "TopicoIA",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Inteligencia Artificial",
+          "synonyms": [
+            "IA",
+            "Artificial Intelligence",
+            "AI"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Minería de Datos",
+          "synonyms": [
+            "Data Mining"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Redes Neuronales",
+          "synonyms": [
+            "Sistema Conexionista",
+            "Red Neuronal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Algoritmos Genéticos",
+          "synonyms": [
+            "Algoritmo Genético"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Web Semántica",
+          "synonyms": [
+            "Web 3.0",
+            "Semantic Web"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Aprendizaje Automático",
+          "synonyms": [
+            "Machine Learning",
+            "Aprendizaje de Máquina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Agentes Inteligentes",
+          "synonyms": [
+            "Agentes Inteligentes Abstractos",
+            "Agente Inteligente"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ontología",
+          "synonyms": [
+            "Ontologias"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Redes Bayesianas",
+          "synonyms": [
+            "Red de Bayes",
+            "Red Bayesiana",
+            "Redes de Bayes"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "EnfoquesIA",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Sistemas que piensan racionalmente",
+          "synonyms": [
+            "sistema que piensa racional",
+            "sistemas que piensan racional"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sistemas que actúan racionalmente",
+          "synonyms": [
+            "sistema que actúa racional",
+            "sistemas que actúan racional"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sistemas que piensan como humanos",
+          "synonyms": [
+            "sistema que piensa como humano"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sistemas que actúan como humanos",
+          "synonyms": [
+            "sistema que actúa como humano"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "es",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "Chatbot para resuolver las dudas frecuentes respecto a la materia de Inteligencia Artificial",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Software Ontologia",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para desarrollar una $Topico son: Protegé, Fluent Editor, TopBraid y Web ODE."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Ontología)",
+      "dialog_node": "node_6_1549245944432",
+      "previous_sibling": "node_5_1549245889041"
+    },
+    {
+      "type": "standard",
+      "title": "Software Mineria de Datos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para $Topico son: Weka, R, KNIME y Rapid Miner."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Minería de Datos)",
+      "dialog_node": "node_8_1549246087062",
+      "previous_sibling": "node_3_1548293596518"
+    },
+    {
+      "type": "standard",
+      "title": "Software Redes Bayesianas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para desarrollar $Topico son: Netica, Elvira, OpenMarkov y Matlab."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Bayesianas)",
+      "dialog_node": "node_5_1549245889041",
+      "previous_sibling": "node_4_1549245831661"
+    },
+    {
+      "type": "standard",
+      "title": "Software Web Semantica",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para desarrollar $Topico son: Apache JENA."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Web Semántica)",
+      "dialog_node": "node_7_1549246029791",
+      "previous_sibling": "node_6_1549245944432"
+    },
+    {
+      "type": "standard",
+      "title": "Software Aprendizaje Automatico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para $Topico son: TensorFlow, Matlab, Weka, Wolfram Mathematica"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Aprendizaje Automático)",
+      "dialog_node": "node_3_1548293596518",
+      "previous_sibling": "node_7_1549246029791"
+    },
+    {
+      "type": "standard",
+      "title": "Software Algoritmos Geneticos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para desarrollar $Topico son: JGAP, HeuristicLab y DEAP."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Algoritmos Genéticos)",
+      "dialog_node": "node_4_1549245831661",
+      "previous_sibling": "node_12_1548209307636"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion Software",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento, no conozco programas para el desarrollo de ese tema 😭"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_14_1548209563169",
+      "previous_sibling": "node_8_1549246087062"
+    },
+    {
+      "type": "standard",
+      "title": "Software Redes Neuronales",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para desarrollar $Topico son: Matlab, Chainer, Weka."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Neuronales)",
+      "dialog_node": "node_12_1548209307636",
+      "previous_sibling": "node_11_1548209201763"
+    },
+    {
+      "type": "standard",
+      "title": "Software Agentes Inteligentes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algunos programas para desarrollar $Topico son: JADE, Jadex, Cougaar, Agent Factory, JACK."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1548209056029",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Agentes Inteligentes)",
+      "dialog_node": "node_11_1548209201763"
+    },
+    {
+      "type": "standard",
+      "title": "About Turing",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre Alan Turing conozco: quien fue y que es el test de turing"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@Historia:(Alan Turing)",
+      "dialog_node": "node_3_1563843009401",
+      "previous_sibling": "node_10_1549291950469"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion About",
+      "output": {
+        "text": {
+          "values": [
+            "Lo siento, no conozco sobre ese tema 😢 "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_11_1549291980653",
+      "previous_sibling": "node_3_1563843009401"
+    },
+    {
+      "type": "standard",
+      "title": "About Redes Bayesianas",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre las @TopicoIA conozco su: definición, aplicación y programas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Bayesianas)",
+      "dialog_node": "node_6_1549291649263",
+      "previous_sibling": "node_5_1549291582600"
+    },
+    {
+      "type": "standard",
+      "title": "About Agentes Inteligentes",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre los @TopicoIA conozco su: definición, software, aplicaciones y clasificación."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Agentes Inteligentes)",
+      "dialog_node": "node_3_1549291250203",
+      "previous_sibling": "node_2_1549290634136"
+    },
+    {
+      "type": "standard",
+      "title": "About Web Semántica",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre la @TopicoIA conozco su: definición, aplicación y programas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Web Semántica)",
+      "dialog_node": "node_8_1549291799822",
+      "previous_sibling": "node_7_1549291727529"
+    },
+    {
+      "type": "standard",
+      "title": "About Ontologia",
+      "output": {
+        "text": {
+          "values": [
+            "De la @TopicoIA puedo hablar sobre su: definición, aplicación y programas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:Ontología",
+      "dialog_node": "node_7_1549291727529",
+      "previous_sibling": "node_6_1549291649263"
+    },
+    {
+      "type": "standard",
+      "title": "About Aprendizaje Automatico",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre el @TopicoIA conozco su: definición, aplicación y programas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Aprendizaje Automático)",
+      "dialog_node": "node_9_1549291916803",
+      "previous_sibling": "node_8_1549291799822"
+    },
+    {
+      "type": "standard",
+      "title": "About Redes Neuronales",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre las @TopicoIA conozco su: definición, aplicación y programas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Neuronales)",
+      "dialog_node": "node_4_1549291521177",
+      "previous_sibling": "node_3_1549291250203"
+    },
+    {
+      "type": "standard",
+      "title": "About Algoritmos Geneticos",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre los @TopicoIA puedo decirte su: definición, aplicación y programas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Algoritmos Genéticos)",
+      "dialog_node": "node_5_1549291582600",
+      "previous_sibling": "node_4_1549291521177"
+    },
+    {
+      "type": "standard",
+      "title": "About Mineria de Datos",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre el @TopicoIA conozco su: definición, aplicación y programas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Minería de Datos)",
+      "dialog_node": "node_10_1549291950469",
+      "previous_sibling": "node_9_1549291916803"
+    },
+    {
+      "type": "standard",
+      "title": "About Inteligencia Artificial",
+      "output": {
+        "text": {
+          "values": [
+            "Sobre @TopicoIA conozco su: definición y propósito. También quién fue Alan Turing y el Test de Turing."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1549290589559",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Inteligencia Artificial)",
+      "dialog_node": "node_2_1549290634136"
+    },
+    {
+      "type": "standard",
+      "title": "TestDeTuring",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "El $SobreT, propuesto por Alan Turing en 1950, consiste en una prueba basada en la incapacidad de diferenciar entre entidades inteligentes indiscutibles y seres humanos. El computador supera la prueba si un evaluador humano no es capaz de distinguir si las respuestas en base a una serie de preguntas definidas previamente, son de una persona o no. <br>Puedes ver el siguiente video para una explicación más completa: <a target='_blank' href='https://youtu.be/rg1-i1uxg78?t=151'>@Historia</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@Historia:(Test de Turing)",
+      "dialog_node": "node_9_1548208819359",
+      "previous_sibling": "node_2_1548293456984"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Red Bayesiana",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Las @TopicoIA  son grafos dirigidos en el que cada nodo está comentado con información probabilista cuantitativa. <br>Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/d9yIUzO0fpo?t=27'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Bayesianas)",
+      "dialog_node": "node_7_1548177945417",
+      "previous_sibling": "node_6_1548177767339"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Red Neuronal",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Las $Topico  se definen como sistemas de mapeos no lineales cuya estructura se basa en principios observados en los sistemas nerviosos de humanos y animales. <br>Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/Es7HAzFsW1M?t=137'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Neuronales)",
+      "dialog_node": "node_5_1548177685348",
+      "previous_sibling": "node_4_1548177330746"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Aprendizaje Automatico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "El $Topico es un campo de la inteligencia artificial que busca patrones en datos empíricos sin forzar modelos en los datos. <br>Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/7ClLKBUvmRk?t=341'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Aprendizaje Automático)",
+      "dialog_node": "node_1_1548293380785",
+      "previous_sibling": "node_8_1548177991537"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Ontología",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Una $Topico es una estructura formada por una taxonomía relacional de conceptos y por un conjunto de axiomas o reglas de inferencia mediante los cuales se podrá inferir nuevo conocimiento. <br>Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/Q7G5JBn-wP4?t=146'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:Ontología",
+      "dialog_node": "node_9_1548178004497",
+      "previous_sibling": "node_7_1548177945417"
+    },
+    {
+      "type": "standard",
+      "title": "Definicio Mineria de Datos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La $Topico es un proceso que, a través del descubrimiento y cuantificación de relaciones predictivas en los datos, permite transformar la información disponible en conocimiento útil. <br>Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/UiO0WYCgkTI?t=1153'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Minería de Datos)",
+      "dialog_node": "node_2_1548293456984",
+      "previous_sibling": "node_1_1548293380785"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Agentes Inteligentes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Los $Topico son cualquier cosa capaz de percibir su medioambiente con la ayuda de sensores y actuar en ese medio utilizando actuadores.<br> Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/R13zcJaa_sc?t=46'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Agentes Inteligentes)",
+      "dialog_node": "node_4_1548177330746",
+      "previous_sibling": "node_2_1548175782568"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Web Semantica",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La $Topico es una Web extendida y dotada de mayor significado, en la que los internautas podrán encontrar respuestas a sus preguntas de forma rápida y sencilla gracias a una información mejor definida. <br>Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/Q7G5JBn-wP4?t=25'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Web Semántica)",
+      "dialog_node": "node_8_1548177991537",
+      "previous_sibling": "node_9_1548178004497"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Algoritmo Genetico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Los $Topico  son una técnica de búsqueda iterativa inspirada en los principios de selección natural. El concepto se basa en la generación de poblaciones de individuos mediante la reproducción de los padres. <br>Puedes ver el siguiente video para una explicación más completa:\n<a target='_blank' href='https://youtu.be/-rxGSe2ROX4?t=83'>@TopicoIA</a>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Algoritmos Genéticos)",
+      "dialog_node": "node_6_1548177767339",
+      "previous_sibling": "node_5_1548177685348"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion_Definicion",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento, no tengo conocimiento sobre la definición de lo que estás preguntando 😢   ."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548175625202",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_10_1548178206089",
+      "previous_sibling": "node_9_1548208819359"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion Inteligencia Artificial",
+      "output": {},
+      "parent": "node_1_1548175625202",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_3_1548261241305"
+      },
+      "conditions": "@TopicoIA:(Inteligencia Artificial) || @EnfoquesIA",
+      "dialog_node": "node_2_1548175782568",
+      "digress_out": "allow_all"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion Redes Neuronales",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Las $Topico se pueden aplicar en los ámbitos de: <ul>\n    <li>Medicina: <a target=\"_blank\" href=\"https://www.sciencedirect.com/science/article/pii/S1214021X14600570\">para el diagnóstico médico.</a></li>\n    <li>Agroindustria: <a target=\"_blank\" href=\"http://www.scielo.org.mx/scielo.php?pid=S1665-73812013000200003&script=sci_arttext&tlng=pt\">gasificación de biomasa.</a></li>\n    <li>Demografía: <a target=\"_blank\" href=\"https://revistas.unicordoba.edu.co/index.php/revistamvz/article/view/158\">predecir el crecimiento de poblaciones como aves.</a></li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Neuronales)",
+      "dialog_node": "node_6_1548208275266",
+      "previous_sibling": "node_5_1548207937893"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion Aprendizaje Automatico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "El $Topico se puede aplicar en: <ul>\n    <li>Videojuegos [16]: <a target=\"_blank\" href=\"https://eprints.ucm.es/49801/1/T40485.pdf\">desarrollo de agentes inteligentes en videojuegos.</a></li>\n    <li>Tránsito [17]: <a target=\"_blank\" href=\"https://www.usenix.org/system/files/conference/osdi16/osdi16-abadi.pdf\">detección de peatones en aplicaciones de conducción autónoma.</a></li>\n    <li>Visión por computador [17]: <a target=\"_blank\" href=\"https://www.usenix.org/system/files/conference/osdi16/osdi16-abadi.pdf\">reconocimiento de objetos en fotografías.</a></li>\n    <li>Medicina [18]: <a target=\"_blank\" href=\"https://www.sciencedirect.com/science/article/pii/S2001037014000464\">pronóstico y predicción del cáncer.</a></li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Aprendizaje Automático)",
+      "dialog_node": "node_4_1548293781919",
+      "previous_sibling": "node_3_1549245719779"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion Ontologia",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La $Topico se pueden aplicar en: <ul>\n    <li>Medicina [15]: <a target=\"_blank\" href=\"http://link.springer.com/10.1007/s11042-011-0919-6\">modelar información de atención médica.</a></li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Ontología)",
+      "dialog_node": "node_3_1549245719779",
+      "previous_sibling": "node_2_1549245665172"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion Redes Bayesianas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Las $Topico se pueden aplicar en el ámbito: <ul>\n    <li>Financiero: <a target=\"_blank\" href=\"https://www.sciencedirect.com/science/article/pii/S0186104215000832\">identificar y cuantificar factores de riesgo operacional.</a></li>\n    <li>Deporte: <a target=\"_blank\" href=\"http://revistas.um.es/analesps/article/view/167531\">analizar la motivación, clima motivacional y ansiedad en jugadores.</a></li>\n    <li>Educación: <a target=\"_blank\" href=\"http://dspace.unl.edu.ec/jspui/handle/123456789/10956\">desarrollo de un sistema web para enseñar el idioma inglés en niños.</a></li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Redes Bayesianas)",
+      "dialog_node": "node_2_1549245665172",
+      "previous_sibling": "node_1_1549245568516"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion Algoritmos Geneticos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Las $Topico se pueden aplicar en: <ul>\n    <li>Economía: <a target=\"_blank\" href=\"https://rd.springer.com/chapter/10.1007/978-3-030-05532-5_50\">para el desarrollo de estrategias de puja en mercados económicos.</a></li>\n    <li>Ecología: <a target=\"_blank\" href=\"https://rd.springer.com/chapter/10.1007/978-3-030-05532-5_50\">modelar fenómenos ecológicos como simbiosis y flujo de recursos.</a></li>\n    <li>Sistemas sociales: <a target=\"_blank\" href=\"https://rd.springer.com/chapter/10.1007/978-3-030-05532-5_50\">estudiar la evolución del comportamiento social en colonias de insectos.</a></li>\n    <li>Ingeniería del software: <a target=\"_blank\" href=\"https://rd.springer.com/chapter/10.1007/978-3-030-05532-5_50\">para la optimización de la relación tiempo-coste de un proyecto.</a></li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Algoritmos Genéticos)",
+      "dialog_node": "node_1_1549245568516",
+      "previous_sibling": "node_6_1548208275266"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion Mineria de Datos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La $Topico puede aplicarse en campos como: <ul>\n    <li>Marketing: <a target=\"_blank\" href=\"https://www.rmlconsultores.com/revista/index.php/crv/article/view/169\">para identificar la tendencia de potenciales clientes para un bien o servicio.</a></li>\n    <li>Policial: <a target=\"_blank\" href=\"https://www.rmlconsultores.com/revista/index.php/crv/article/view/169\">para detección de fraudes.</a></li>\n    <li>Educación: <a target=\"_blank\" href=\"http://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-50062015000500002&lng=en&nrm=iso&tlng=en\">para analizar la deserción o permanencia de estudiantes universitarios.</a></li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Minería de Datos)",
+      "dialog_node": "node_5_1548293860357",
+      "previous_sibling": "node_4_1548293781919"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion Aplicacion",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento, no conozco la aplicación de ese tema 😢 "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_13_1548209520809",
+      "previous_sibling": "node_5_1548293860357"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion Agentes Inteligentes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Los $Topico se pueden aplicar en los ámbitos de: <ul>\n    <li>Educación: <a target=\"_blank\" href=\"http://dspace.unl.edu.ec/jspui/handle/123456789/11683\">búsqueda de objetos de aprendizaje</a></li>\n    <li>Geografía: <a target=\"_blank\" href=\"http://dspace.unl.edu.ec/jspui/handle/123456789/11683\">búsqueda de metadatos geográficos</a></li>\n    <li>Financiero: <a target=\"_blank\" href=\"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2832128\">evaluación de riesgos crediticios.</a></li>\n    <li>Jurídico: <a target=\"_blank\" href=\"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2832128\">para el tráfico jurídico</a></li>\n</ul>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1548207901061",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Agentes Inteligentes)",
+      "dialog_node": "node_5_1548207937893"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion Proposito",
+      "output": {
+        "text": {
+          "values": [
+            "Lo siento, no conozco el propósito del tema que me estás preguntando."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1550760975664",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_6_1550761133495",
+      "previous_sibling": "node_5_1550761094799"
+    },
+    {
+      "type": "standard",
+      "title": "Inteligencia Artificial",
+      "output": {
+        "text": {
+          "values": [
+            "El propósito de la @TopicoIA es desarrollar un sistema de computadora capaz de reproducir la inteligencia humana, que funcione de forma autónoma y pueda ser un reemplazo de la misma"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1550760975664",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Inteligencia Artificial)",
+      "dialog_node": "node_5_1550761094799"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion_Clasificacion",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento no conozco la clasificación de ese tema 😢 ."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548207289984",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_3_1548207820220",
+      "previous_sibling": "node_2_1548207354728"
+    },
+    {
+      "type": "standard",
+      "title": "Clasificacion Agentes Inteligentes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Los $Topico se clasifican en: Reactivos, Deliberativos, Cooperativos, Interfaz, Móviles, Estáticos, Información/Internet"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1548207289984",
+      "metadata": {},
+      "conditions": "@TopicoIA:(Agentes Inteligentes)",
+      "dialog_node": "node_2_1548207354728"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion Acerca De",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lo siento, no conozco sobre la persona que estás preguntando."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1548208608903",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_2_1548260099963",
+      "previous_sibling": "node_8_1548208763346"
+    },
+    {
+      "type": "standard",
+      "title": "QuienFueTuring",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$SobreT (1912-1954), fue un matemático y precursor de la Inteligencia Artificial, destacando entre sus varios trabajos: la elaboración de la prueba de Turing en 1950 y la publicación de “Sobre números computables, con una aplicación al Entscheidungsproblem (o problema de decisión)” (considerado cómo la piedra angular de la informática moderna)."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1548208608903",
+      "metadata": {},
+      "conditions": "$SobreT:(Alan Turing)",
+      "dialog_node": "node_8_1548208763346"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion Definicion IA",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1548175782568",
+      "metadata": {},
+      "conditions": "@TopicoIA",
+      "dialog_node": "node_10_1549287824662",
+      "previous_sibling": "node_1_1549285386213"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "La  $Topico se puede definir desde cuatro enfoques: Sistemas que piensan como humanos, Sistemas que piensan racionalmente, Sistemas que actúan como humanos y Sistemas que actúan racionalmente. <br>Puedes ver el siguiente video para una explicación más completa:  <a target='_blank' href='https://www.youtube.com/watch?v=NSf3o-wxtQ0'>@TopicoIA</a>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1548175782568",
+      "context": {
+        "Enfoque": "enfoque"
+      },
+      "metadata": {},
+      "conditions": "@Enfoque != 'enfoque'",
+      "dialog_node": "node_9_1549247029609",
+      "previous_sibling": "node_1_1563841698661"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1548175782568",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_3_1548261241305"
+      },
+      "conditions": "@EnfoquesIA",
+      "dialog_node": "node_1_1563841698661",
+      "previous_sibling": "node_10_1549287824662"
+    },
+    {
+      "type": "standard",
+      "title": "Sistemas_actuan_humanos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La Inteligencia Artificial vista desde el enfoque de @EnfoquesIA es: El arte de desarrollar máquinas con capacidad para realizar funciones que cuando son realizadas por personas requieren de inteligencia."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1548175782568",
+      "metadata": {},
+      "conditions": "@EnfoquesIA:(Sistemas que actúan como humanos) || @Enfoque",
+      "dialog_node": "node_5_1548262075739",
+      "previous_sibling": "node_4_1548262012268"
+    },
+    {
+      "type": "standard",
+      "title": "Sistemas_piensan_racionlamente",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La Inteligencia Artificial vista desde el enfoque de @EnfoquesIA es: el estudio de las facultades mentales mediante el uso de modelos computacionales"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1548175782568",
+      "metadata": {},
+      "conditions": "@EnfoquesIA:(Sistemas que piensan racionalmente) || @Enfoque",
+      "dialog_node": "node_4_1548262012268",
+      "previous_sibling": "node_3_1548261241305"
+    },
+    {
+      "type": "standard",
+      "title": "Excepcion Enfoques",
+      "output": {
+        "text": {
+          "values": [
+            "Disculpa, pero no identifico ese enfoque."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1548175782568",
+      "metadata": {},
+      "conditions": "anything_else && @Enfoque",
+      "dialog_node": "node_1_1549285386213",
+      "previous_sibling": "node_6_1548262152338"
+    },
+    {
+      "type": "standard",
+      "title": "Sistemas_actuan_racional",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La Inteligencia Artificial vista desde el enfoque @EnfoquesIA es: el estudio del diseño de agentes inteligentes."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1548175782568",
+      "metadata": {},
+      "conditions": "@EnfoquesIA:(Sistemas que actúan racionalmente) || @Enfoque",
+      "dialog_node": "node_6_1548262152338",
+      "previous_sibling": "node_5_1548262075739"
+    },
+    {
+      "type": "standard",
+      "title": "Sistemas_piensan_humanos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "La Inteligencia Artificial vista desde el enfoque de @EnfoquesIA es: el nuevo y excitante esfuerzo de hacer que los computadores piensen, máquinas con mentes, en el más amplio sentido literal."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1548175782568",
+      "metadata": {},
+      "conditions": "@EnfoquesIA:(Sistemas que piensan como humanos) || @Enfoque",
+      "dialog_node": "node_3_1548261241305"
+    },
+    {
+      "type": "standard",
+      "title": "Topicos",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "context": {
+        "SobreT": "@Historia",
+        "Topico": "@TopicoIA"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1548208608903"
+      },
+      "conditions": "@Historia || @TopicoIA",
+      "dialog_node": "node_2_1563842829945",
+      "previous_sibling": "node_3_1550760686595"
+    },
+    {
+      "type": "standard",
+      "title": "AboutTopico",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_2_1549290634136"
+      },
+      "conditions": "#AcercaDeIA || @TopicoIA || @Historia",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1549290589559",
+      "previous_sibling": "node_10_1548209056029"
+    },
+    {
+      "type": "standard",
+      "title": "En otras cosas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No le he entendido. Intente reformular la consulta. 😥"
+              },
+              {
+                "text": "¿Puede expresarse con otras palabras? No le he entendido ☹️"
+              },
+              {
+                "text": "No entendí el significado 🤔"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "En otras cosas",
+      "previous_sibling": "node_2_1550760467725"
+    },
+    {
+      "type": "standard",
+      "title": "Despedida",
+      "output": {
+        "text": {
+          "values": [
+            "Un gusto haberte ayudado 😃",
+            "Nos vemos, que te vaya bien 🖐",
+            "Chao, espero haberte ayudado 😊"
+          ],
+          "selection_policy": "random"
+        }
+      },
+      "metadata": {},
+      "conditions": "#Despedida",
+      "dialog_node": "node_2_1550760467725",
+      "previous_sibling": "node_1_1549290589559"
+    },
+    {
+      "type": "standard",
+      "title": "Definicion",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_2_1548175782568"
+      },
+      "conditions": "#Definicion || @EnfoquesIA",
+      "dialog_node": "node_1_1548175625202",
+      "previous_sibling": "node_1_1564019055049"
+    },
+    {
+      "type": "standard",
+      "title": "AcercaDeTuring",
+      "output": {
+        "generic": []
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_8_1548208763346"
+      },
+      "conditions": "#AcercaDeTuring",
+      "dialog_node": "node_7_1548208608903",
+      "previous_sibling": "node_2_1563842829945"
+    },
+    {
+      "type": "standard",
+      "title": "Clasificacion",
+      "output": {
+        "generic": []
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_2_1548207354728"
+      },
+      "conditions": "#Clasificación",
+      "dialog_node": "node_1_1548207289984",
+      "previous_sibling": "node_1_1548175625202"
+    },
+    {
+      "type": "standard",
+      "title": "Software",
+      "output": {
+        "generic": []
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_11_1548209201763"
+      },
+      "conditions": "#Software",
+      "dialog_node": "node_10_1548209056029",
+      "previous_sibling": "node_4_1548207901061"
+    },
+    {
+      "type": "standard",
+      "title": "Negacion",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "En otras cosas"
+      },
+      "conditions": "#Negacion",
+      "dialog_node": "node_1_1564019055049",
+      "previous_sibling": "node_4_1550760975664"
+    },
+    {
+      "type": "standard",
+      "title": "Aplicacion",
+      "output": {
+        "generic": []
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_5_1548207937893"
+      },
+      "conditions": "#Aplicación",
+      "dialog_node": "node_4_1548207901061",
+      "previous_sibling": "node_1_1548207289984"
+    },
+    {
+      "type": "standard",
+      "title": "Saludo",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Bienvenido"
+      },
+      "conditions": "#Saludo",
+      "dialog_node": "node_3_1550760686595",
+      "previous_sibling": "Bienvenido"
+    },
+    {
+      "type": "standard",
+      "title": "Proposito",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_5_1550761094799"
+      },
+      "conditions": "#Propósito",
+      "dialog_node": "node_4_1550760975664",
+      "previous_sibling": "node_7_1548208608903"
+    },
+    {
+      "type": "standard",
+      "title": "Bienvenido",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hola, puedo hablar sobre la definición, aplicación y software de temas relacionados a la inteligencia artificial: agentes inteligentes, redes neuronales, algoritmos genéticos, redes bayesianas, ontología, web semántica, aprendizaje automático y minería de datos."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome || #AcercaDeIA && @TopicoIA != 'Inteligencia Artificial' && @TopicoIA != 'Minería de Datos' && @TopicoIA != 'Redes Neuronales' && @TopicoIA != 'Algoritmos Genéticos' && @TopicoIA != 'Web Semántica' && @TopicoIA != 'Aprendizaje Automático' && @TopicoIA != 'Agentes Inteligentes' && @TopicoIA != 'Ontología' && @TopicoIA != 'Redes Bayesianas'",
+      "dialog_node": "Bienvenido"
+    }
+  ],
+  "workspace_id": "6754dfca-3227-43b9-bf3f-622e9b13bb99",
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "status": "Available"
+}
